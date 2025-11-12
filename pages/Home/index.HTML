@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.CSS">
+</head>
+<body>
+    <header>
+        <div class="home">
+        <h1> Thakorn Dechopol </h1>
+        
+        
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <script src="../script.js"></script>
+        <nav id="menu">
+                <a href="../Home/index.HTML">Home</a>
+                <a href="../about/index.html">About me</a>
+                <a href="../project/index.Html">Project</a>
+                <a href="../certificate/index.html">Certificate</a>
+                <a href="#contact">Contact</a>
+        </nav>
+        
+        
+    </header>
+        
+
+<main>
+    <section class="intro-section">
+    <div class="left">
+        <img src="../../assets/img/Richter.jpg">
+    </div>
+    <div class="right">
+        <h1 id="name"></h1>
+        <p id="description">I'm a Grade 8 student that interest in coding.</p>
+        <a href="" class="contact-btn">learn more</a>
+    </div>
+    </section>
+
+    <section class="doing">
+        <h2>What i'm doing</h2>
+
+        <div class="doing-grid">
+            <div class="doing-item">Playing football games</div>
+            <div class="doing-item">Playing basketball</div>
+            <div class="doing-item">Likes to go on a trip in nature</div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-container">
+            <p>Contact me</p>
+
+            <ul>
+                <li>Email: <a href="mailto:richter250911@gmail.com">richter250911@gmail.com</a></li>
+                <li>Discord: terrified_penguin</li>
+            </ul>
+            <p class="copyright">© 2025 Thakorn Dechopol. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../datas/about.js"></script>
+
+    <script>
+        document.getElementById('name').innerText = `My name is ${aboutData.name}`;
+        document.getElementById('description').innerText = `description: ${aboutData.Description}`;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const doingGrid = document.getElementById('doing-grid');
+
+
+        if (doingGrid && window.doinglist?.doing){
+            window.doinglist.doing.forEach((activity) => {
+                const div = document.createElement('div');
+                div.className = 'doing-item';
+                div.textContent = activity;
+                doingGrid.appendChild(div);
+            });
+        }
+    });
+
+
+    
+     
+    </script>
+</body>
+</html>

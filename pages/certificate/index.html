@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.CSS">
+</head>
+<body>
+    <header>
+        <div class="home">
+        <h1> Thakorn Dechopol </h1>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <script src="../script.js"></script>
+        <nav id="menu">
+                <a href="../Home/index.HTML">Home</a>
+                <a href="../about/index.html">About me</a>
+                <a href="../project/index.Html">Project</a>
+                <a href="../certificate/index.html">Certificate</a>
+                <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    
+    
+    <main>
+
+        <h2>My Certificates</h2>
+        <div id="certificate-grid" class="certificate-grid"></div>
+        <!--div class="certificate-grid">
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Python.jpg" alt="">
+                <h3>Python</h3>
+                <p>Certificate of completion for the Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/HTML 1.jpg" alt="">
+                <h3>HTML</h3>
+                <p>Certificate of completion for the HTML course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div>
+            <div class="certificate-card">
+                <img src="../../assets/img/Pre-python.jpg" alt="">
+                <h3>Pre-Python</h3>
+                <p>Certificate of completion for the Pre-Python course.</p>
+            </div-->
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>Contact me</p>
+
+            <ul>
+                <li>Email: <a href="mailto:richter250911@gmail.com">richter250911@gmail.com</a></li>
+                <li>Discord: terrified_penguin</li>
+            </ul>
+            <p class="copyright">© 2025 Thakorn Dechopol. All rights reserved.</p>
+        </div>
+    </footer>
+    <!--script src="../../datas/certificate.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const Grid = document.getElementById("certificate-grid");
+
+            if (Grid && typeof certificateData !== "undefined"){
+                certificateData.forEach(cert => {
+                    const card = document.createElement("div");
+                    card.className = "certificate-card";
+                    card.innerHTML = `
+                
+                    <img src="${cert.pic}" alt="${cert.title}">
+                    <h3>${cert.title}</h3>
+                    <p>${cert.description}</p>
+                `;
+
+                    Grid.appendChild(card);
+                });
+            }
+        })
+    </script-->
+    <script src="../../datas/certificate.js"></script>
+    <script src="../../script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            console.log("Website is ready");
+
+            const grid = document.getElementById("certificate-grid");
+
+            if ( typeof certificateData !== "undefined" && certificateData.length > 0) {
+                console.log("data :", certificateData.length)
+            } else{
+                console.log("no data");
+            }
+            
+
+            if (grid && typeof certificateData !== "undefined") {
+                certificateData.forEach(cert => {
+                    const card = document.createElement("div");
+                    card.className = "certificate-card";
+                    card.innerHTML = `
+            <img src="${cert.pic}" alt="${cert.title}">
+            <h3>${cert.title}</h3>
+            <p>${cert.description}</p>
+          `;
+                    grid.appendChild(card);
+                });
+            }
+        });
+
+
+    </script>
+</body>
+</html>
